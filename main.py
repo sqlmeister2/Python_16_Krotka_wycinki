@@ -2,7 +2,7 @@
 #może przechowywać mieszane typy danych jak lista
 krotka = (2, 4, 8, 16, 32, 64, 128)
 
-#wyswietlanie
+# wyswietlanie
 print(krotka)
 print(krotka[0])
 print(krotka[6])
@@ -30,15 +30,17 @@ print(krotka[0:7:2]) # trzeci parametr to skok
 print(krotka[2:]) # pobieramy kolekcje do samego konca
 print(krotka[:4])
 
-#odwrócenie kolejności wyswietlania
+# odwrócenie kolejności wyswietlania
 print(krotka[:4:-1]) # odpowiada za to ujemny parametr skoku
 print(krotka[:4:-2])
 
 print("----")
-print(2 in krotka)
+print(2 in krotka) #zwraca logicznie czy 2 wystepuje w krotce
 
 #dodana inna krotka do krotki
-krotka = krotka + (10, 20)
+print(id(krotka))
+krotka = krotka + (10, 20) #tu tworzy się nowy obiekt jako krotka. widac po id
+print(id(krotka))
 print(krotka)
 
 #Tworzenie krotki  z listy i mozna z krotki na liste
@@ -46,20 +48,16 @@ my_list = [10,4, 6, 88, 46, 2, 0]
 my_tuple = tuple(my_list)
 print(my_tuple)
 
-print(max(my_tuple))
-
-#redukcja
+#agregacje
+my_tuple = (10,4, 6, 8, 46, 2, 0)
+print(max(my_tuple)) #musza być tego samego typu obiekty w tupli
+print(min(my_tuple))
 print(sum(my_tuple))
 
+
+# przypisywanie elementow tupli do zmiennych
 a = my_tuple[0]
 print(a)
 a, b, c, d, e, f, g = my_tuple
 print(e)
-
-print("---")
-tax = (4, 7, 8, 23, 8)
-print(tax[-1])
-print(tax.index(8))
-print(tax.count(8))
-print(max(tax))
 
